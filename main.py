@@ -19,7 +19,9 @@ english = ['I','very', 'interested', 'programming']
 french = ['je','très','intéressé','laprogrammation']
 germen = ['ich' ,'sehr' ,'interessiert' ,'Programmierung']
 
-sentence = "I am very interested in programming"
+#sentence = "I am very interested in programming"
+sentence = "ich sehr ohhh interessiert Programmierung eyyy"
+
 r =  []
 if sentence.split()[0] in english:
     for i in sentence.split():
@@ -27,10 +29,21 @@ if sentence.split()[0] in english:
             r.append(farsi[english.index(i)])
         else:
             r.append(i)
+elif sentence.split()[0] in french:
+    for i in sentence.split():
+        if i in french:
+            r.append(farsi[french.index(i)])
+        else:
+            r.append(i)
+elif sentence.split()[0] in germen:
+    for i in sentence.split():
+        if i in germen:
+            r.append(farsi[germen.index(i)])
+        else:
+            r.append(i)
 else:
     print('something is wrong')
-for i in r:
-    print(f'{i} ', end=" ")
 
-#print(dict(enumerate(sentence.split())))
-#print(dict(enumerate(english)))
+for i in r:
+    print(f'{i} ', end="")
+
